@@ -1,8 +1,6 @@
-output "firstoutput"
-{
-  value=var.firstname
+output "firstoutput"{
+value=var.firstname
 }
-output "lastoutput"
-{
+output "lastoutput"{
   value=var.lastname
 }
