@@ -39,6 +39,6 @@ variable "restraunt5"{
 default ="periperi"
 }
 variable "millenialyear"{
-  type=string
-default ="2000"
+  type=number
+default =2000
 }
