@@ -18,3 +18,23 @@ variable "lastname"{
 type=string 
 default ="kaur"
 }
+variable "restraunt1"{
+  type=string
+default ="pizzapizza"
+}
+variable "restraunt2"{
+  type=string
+default ="pindlasalle"
+}
+variable "restraunt3"{
+  type=string
+default ="mcdonald"
+}
+variable "restraunt4"{
+  type=string
+default ="harvey"
+}
+variable "restraunt5"{
+  type=string
+default ="periperi"
+}
