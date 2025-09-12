@@ -1,8 +1,8 @@
 output "firstoutput"
 {
-  value=var.firstname
+  value=kamal
 }
 output "lastoutput"
 {
-  value=var.lastname
+  value=kaur
 }
