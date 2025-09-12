@@ -20,7 +20,7 @@ output  "restraunttoutput5"{
 value=var.restraunt5
 }
 output  millenialyear"{
-value=[var.millenialyear] 
+value=var.millenialyear
 }
 
 
