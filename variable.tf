@@ -10,11 +10,11 @@ variable "client_secret"{
 variable "tenant_id"{
   type=string
 }
-variable "first name"{
+variable "firstname"{
 type=string 
 default =" kamal"
 }
-variable "last name"{
+variable "lastname"{
 type=string 
 default ="kaur"
 }
