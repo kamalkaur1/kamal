@@ -38,3 +38,7 @@ variable "restraunt5"{
   type=string
 default ="periperi"
 }
+variable "millenialyear"{
+  type=string
+default ="2000"
+}
