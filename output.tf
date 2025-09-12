@@ -22,6 +22,9 @@ value=var.restraunt5
 output  "millenialyear"{
 value=var.millenialyear
 }
+output  "booleanoutput"{
+value=var.truefalse
+}
 
 
 
