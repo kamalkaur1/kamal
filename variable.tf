@@ -42,10 +42,6 @@ variable "millenialyear"{
   type=number
 default =2000
 }
-variable "boolean"{
-  type=string
-default =false
-}
 variable "truefalse"{
   type=string
 default =false
