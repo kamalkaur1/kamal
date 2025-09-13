@@ -43,7 +43,7 @@ variable "millenialyear"{
 default =2000
 }
 variable "truefalse"{
-  type=string
+  type=bool
 default =false
 }
 
