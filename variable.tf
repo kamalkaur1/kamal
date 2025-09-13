@@ -46,4 +46,8 @@ variable "truefalse"{
   type=bool
 default =false
 }
+variable "list" {
+  type    = list(string)
+  default = ["hello", "class", "MCIT"]
+}
 
