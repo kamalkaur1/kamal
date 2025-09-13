@@ -25,6 +25,9 @@ value=var.millenialyear
 output  "booleanoutput"{
 value=var.truefalse
 }
+output  "list"{
+value=var.list
+}
 
 
 
