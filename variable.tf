@@ -94,3 +94,7 @@ variable "activities" {
   type    = list(string) 
   default = ["watchingtv", "listeningmusic", "cooking"]
 }
+variable "movies" {
+  type    = string
+  default = ["DDLJ", "JATT AND JULIET ", "TIGER"]
+}
