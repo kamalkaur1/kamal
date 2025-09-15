@@ -1,5 +1,5 @@
 locals {  
- fullname="${var.app_name}-prod"
+ fullname="${var.appname}-prod"
  }
 
 
