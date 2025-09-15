@@ -78,9 +78,9 @@ variable "affirmationstupid" {
     type        = bool
   default     = false
 }
-variable"cloudclass" {
+variable"appname" {
  type        = string
-  default      =cloud
+  default      ="cloudapp"
 }
 
 
