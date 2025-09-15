@@ -50,4 +50,41 @@ variable "list" {
   type    = list(string)
   default = ["hello", "class", "MCIT"]
 }
+variable "listofcolors" {
+  type    = list(string)
+  default = ["red", "yellow", "blue","pink", "black"]
+}
+variable "listoffruits" {
+  type    = list(string)
+  default = ["apple", "mango", "avacado","banana", "blueberries"]
+}
+variable "listoffoods" {
+  type    = list(string)
+  default = ["macroni", "pizza", "pasta"]
+}
+variable "listoftravel" {
+  type    = list(string)
+  default = ["UK", "Australia", "USA"]
+}
+variable "listoficecream" {
+  type    = list(string)
+  default = ["vanilla", "strawberry", "rasberryflavor"]
+}
+variable "truefalse"{
+  type=bool
+default =false
+}
+
+variable "affirmationstrong" {
+    type        = bool
+  default     = true
+}
+
+variable "affirmationstupid" {
+    type        = bool
+  default     = false
+}
+
+
+
 
