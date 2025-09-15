@@ -28,9 +28,23 @@ value=var.truefalse
 output  "list"{
 value=var.list
 }
-
-
-
-
+output  "listoffruits"{
+value=var.listoffruits
+}
+output  "listoftravel"{
+value=var.listoftravel
+}
+output  "listoficecream"{
+value=var.listoficecream
+}
+output  "listofcolors{
+value=var.listofcolors
+}
+output  "affirmationstrong"{
+value=var.affirmationstrong
+}
+output  "affirmationstupid"{
+value=var.affirmationstupid
+}
 
 
