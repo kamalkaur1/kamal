@@ -37,8 +37,8 @@ value=var.listoftravel
 output  "listoficecream"{
 value=var.listoficecream
 }
-output  "listofcolors{
-value=var.listofcolors
+output  "colors{
+value=var.colors
 }
 output  "affirmationstrong"{
 value=var.affirmationstrong
