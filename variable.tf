@@ -50,7 +50,7 @@ variable "list" {
   type    = list(string)
   default = ["hello", "class", "MCIT"]
 }
-variable "listofcolors"{
+variable "colors"{
   type    = list(string)
   default = ["red", "yellow", "blue","pink", "black"]
 }
