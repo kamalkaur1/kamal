@@ -58,4 +58,7 @@ output "server_name_parts" {
 output "activities" {
   value = join(",", var.activities)
 }
+output "activities" {
+  value = join(",", var.activities)
+}
 
