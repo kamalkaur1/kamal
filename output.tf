@@ -58,6 +58,4 @@ output "server_name_parts" {
 output "activities" {
   value = join(",", var.activities)
 }
-output "activities1" {
-  value = split("--", ">",var.activities)
-}
+
