@@ -70,10 +70,6 @@ variable "listoficecream"{
   type    = list(string)
   default = ["vanilla", "strawberry", "rasberryflavor"]
 }
-variable "truefalse"{
-  type=bool
-default =false
-}
 variable "affirmationstrong"{
     type        = bool
   default     = true
