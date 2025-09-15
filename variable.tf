@@ -82,6 +82,9 @@ variable"appname" {
  type        = string
   default      ="cloudapp"
 }
-
+variable "items" {
+  type    = list(string)
+  default = ["one", "two", "three"]
+}
 
 
