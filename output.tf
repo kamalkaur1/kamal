@@ -55,7 +55,9 @@ output "csv_items" {
 output "server_name_parts" {
   value = split("-", var.server_name)
 }
-output "activitieslist" {
+output "activities" {
   value = join(",", var.activities)
-  value = split("--", (">",var.activities)
+}
+output "activities1" {
+  value = split("--", (">",var.activities))
 }
