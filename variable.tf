@@ -90,4 +90,7 @@ variable "server_name" {
   type    = string
   default = "app-prod-01"
 }
-
+variable "activities" {
+  type    = list(string)
+  default = ["watchingtv", "listeningmusic", "cooking"]
+}
