@@ -96,5 +96,6 @@ variable "activities" {
 }
 variable "movies" {
   type    = string
-  default = ["DDLJ", "JATT AND JULIET ", "TIGER"]
+  default = "DDLJ-JATT AND JULIET-TIGER"
 }
+
