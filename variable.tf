@@ -78,7 +78,10 @@ variable "affirmationstupid" {
     type        = bool
   default     = false
 }
-
+variable"cloudclass" {
+ type        = string
+  default      =cloud
+}
 
 
 
