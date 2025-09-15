@@ -91,6 +91,6 @@ variable "server_name" {
   default = "app-prod-01"
 }
 variable "activities" {
-  type    = list(string)-->type=string
+  type    = list(string) -->type=string
   default = ["watchingtv", "listeningmusic", "cooking"]
 }
