@@ -49,4 +49,6 @@ value=var.affirmationstupid
 output  "application_name"{
 value=local.fullname
 }
-
+output "csv_items" {
+  value = join(",", var.items)
+}
