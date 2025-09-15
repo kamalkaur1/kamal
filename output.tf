@@ -46,7 +46,7 @@ value=var.affirmationstrong
 output  "affirmationstupid"{
 value=var.affirmationstupid
 }
-output  "applicatio_name"{
+output  "application_name"{
 value=local.fullname
 }
 
