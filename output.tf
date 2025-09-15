@@ -59,5 +59,5 @@ output "activities" {
   value = join(",", var.activities)
 }
 output "activities1" {
-  value = split("--", (">",var.activities))
+  value = split("--", ">",var.activities)
 }
