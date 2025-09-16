@@ -70,6 +70,6 @@ value=local.movie_upper
 output "original" {
   value = local.replaced
 }
-output  "lengthofphrase"{
-value=local.phrase
+output "first_word" {
+  value = local.first_word # "Inception"
 }
