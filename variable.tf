@@ -101,3 +101,7 @@ variable "movies" {
 variable "movie" {
   default = "Inception"
 }
+variable "original" {
+  default = "Hello MCIT World"
+}
+ 
