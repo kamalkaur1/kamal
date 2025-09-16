@@ -12,3 +12,6 @@ locals {
 output "replaced_string" {
   value = local.replaced 
 }
+locals {  
+first_word=substr(var.phrase,0,9)# start at index0 ,length9
+}
