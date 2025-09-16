@@ -110,6 +110,6 @@ variable "original" {
   default = "CLOUDCLASS"
 }
 variable "phrase" {
-type    =string
-default = "InceptionMovie"
+  default = "InceptionMovie"
 }
+ 
