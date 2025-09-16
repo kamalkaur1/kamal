@@ -102,8 +102,10 @@ variable "movie" {
   default = "Inception"
 }
 variable "original" {
+ type    = string
   default = "Hello MCIT World"
 }
  variable "replaced" {
+ type    = string
   default = "CLOUDCLASS"
 }
