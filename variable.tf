@@ -109,3 +109,6 @@ variable "original" {
  type    = string
   default = "CLOUDCLASS"
 }
+variable "phrase" {
+default = "InceptionMovie"
+}
