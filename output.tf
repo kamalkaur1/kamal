@@ -70,3 +70,6 @@ value=local.movie_upper
 output "original" {
   value = local.replaced
 }
+output  "lengthofphrase"{
+value=local.phrase
+}
