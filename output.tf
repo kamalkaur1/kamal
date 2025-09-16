@@ -61,4 +61,9 @@ output "activities" {
 output "MOVIES" {
   value = split("-", var.movies)
 }
-
+output  "movie"{
+value=local.movie_lower
+}
+output  "movie"{
+value=local.movie_upper
+}
