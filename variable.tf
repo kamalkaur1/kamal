@@ -104,4 +104,6 @@ variable "movie" {
 variable "original" {
   default = "Hello MCIT World"
 }
- 
+ variable "replaced" {
+  default = "CLOUDCLASS"
+}
