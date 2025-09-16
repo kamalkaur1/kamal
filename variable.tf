@@ -98,4 +98,6 @@ variable "movies" {
   type    = string
   default = "DDLJ-JATTANDJULIET-TIGER"
 }
-
+variable "movie" {
+  default = "Inception"
+}
