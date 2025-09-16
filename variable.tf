@@ -110,6 +110,6 @@ variable "original" {
   default = "CLOUDCLASS"
 }
 variable "phrase" {
-type    = length(string)
+type    =string
 default = "InceptionMovie"
 }
