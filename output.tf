@@ -67,6 +67,6 @@ value=local.movie_lower
 output  "displayupper"{
 value=local.movie_upper
 }
-output "replacedstring" {
-  value = local.replaced 
+output "replacestring" {
+  value = local.replace 
 }
