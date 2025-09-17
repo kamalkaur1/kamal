@@ -37,7 +37,7 @@ locals {
                 sum([for p in local.score_pairs : p.score]) / length(local.score_pairs)
 }
 locals {
- unique_sorted = sort(distinct(var.items))
+ unique_sorted = sort(distinct(var.items1))
  csv           = join(",", local.unique_sorted)
 }
 
