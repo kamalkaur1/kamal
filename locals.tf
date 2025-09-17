@@ -18,3 +18,8 @@ first_word=substr(var.phrase,0,9)# start at index0 ,length9
 locals {
  labels_upper = toset([for s in var.labels : upper(s)])
 }
+variable "usernames" {
+ type    = list(string)
+ default = ["alice", "bob", "carol"]
+}
+
