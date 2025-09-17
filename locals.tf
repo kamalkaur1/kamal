@@ -32,6 +32,7 @@ locals {
      score = tonumber(split(":", s)[1])
  ]
  } 
+ }
  scores_map   = { for p in local.score_pairs : p.name => p.score }
  average      = length(local.score_pairs) == 0 ? 0 :
                 sum([for p in local.score_pairs : p.score]) / length(local.score_pairs)
