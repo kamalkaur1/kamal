@@ -33,6 +33,13 @@ locals {
  evens   = [for n in var.nums : n if n % 2 == 0]
  squares = [for n in local.evens : n * n]
 }
+locals {
+ initials = toset([for n in var.names : substr(n, 0, 1)])
+ grouped  = {
+   for i in local.initials :
+   i => [for n in var.names : n if substr(n, 0, 1) == i]
+ }
+}
 
 
 
