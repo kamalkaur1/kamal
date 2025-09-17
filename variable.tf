@@ -129,6 +129,10 @@ variable "items1" {
  type    = list(string)
  default = ["b", "a", "c", "a", "b"]
 }
+variable "nums" {
+ type    = list(number)
+ default = [1,2,3,4,5,6]
+}
 
 
  
