@@ -109,6 +109,11 @@ variable "original" {
  type    = string
   default = "CLOUDCLASS"
 }
+variable "labels" {
+ type    = set(string)
+ default = ["alpha", "beta", "gamma"]
+}
+
 variable "phrase" {
   default = "InceptionMovie"
 }
