@@ -117,4 +117,10 @@ variable "labels" {
 variable "phrase" {
   default = "InceptionMovie"
 }
+variable "domain" {
+ type    = string
+ default = "example.com"
+}
+
+
  
