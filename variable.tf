@@ -137,7 +137,10 @@ variable "names" {
  type    = list(string)
  default = ["amy", "adam", "bob", "brian", "carol"]
 }
-
+variable "words" {
+ type    = list(string)
+ default = ["hi", "cat", "car", "tree", "hi", "car"]
+}
 
 
  
