@@ -79,4 +79,6 @@ output "labels_upper" {
 output "emails" {
  value = local.emails
 }
+output "scores_map" { value = local.scores_map }
+output "avg_score"  { value = local.average    }
 
