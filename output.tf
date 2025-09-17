@@ -79,5 +79,7 @@ output "labels_upper" {
 output "emails" {
  value = local.emails
 }
+output "unique_sorted" { value = local.unique_sorted }
+output "csv"           { value = local.csv }
 
 
