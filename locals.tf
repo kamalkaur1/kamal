@@ -22,4 +22,7 @@ variable "usernames" {
  type    = list(string)
  default = ["alice", "bob", "carol"]
 }
+locals {
+ emails = { for u in var.usernames : u => "${u}@${var.domain}" }
+}
 
