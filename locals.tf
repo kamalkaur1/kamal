@@ -25,7 +25,6 @@ variable "usernames" {
 locals {
  emails = { for u in var.usernames : u => "${u}@${var.domain}" }
 }
-}
 locals {
  unique_sorted = sort(distinct(var.items1))
  csv           = join(",", local.unique_sorted)
