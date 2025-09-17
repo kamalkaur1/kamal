@@ -73,3 +73,6 @@ output "original" {
 output "first_word" {
   value = local.first_word # "Inception"
 }
+output "labels_upper" {
+ value = local.labels_upper
+}
