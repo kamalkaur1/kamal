@@ -36,5 +36,10 @@ locals {
  average      = length(local.score_pairs) == 0 ? 0 :
                 sum([for p in local.score_pairs : p.score]) / length(local.score_pairs)
 }
+locals {
+ unique_sorted = sort(distinct(var.items))
+ csv           = join(",", local.unique_sorted)
+}
+
 
 
