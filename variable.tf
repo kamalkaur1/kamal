@@ -141,6 +141,9 @@ variable "words" {
  type    = list(string)
  default = ["hi", "cat", "car", "tree", "hi", "car"]
 }
-
+variable "raw_scores" {
+ type    = list(string)
+ default = ["alice:90", "bob:75", "carol:85"]
+}
 
  
