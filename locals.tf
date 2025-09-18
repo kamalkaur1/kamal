@@ -40,6 +40,12 @@ locals {
    i => [for n in var.names : n if substr(n, 0, 1) == i]
  }
 }
-
+locals {
+ score_pairs = [
+   for s in var.raw_scores : {
+     name  = split(":", s)[0]
+     score = tonumber(split(":", s)[1])
+   }
+ ]
 
 
