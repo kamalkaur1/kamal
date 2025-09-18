@@ -121,10 +121,6 @@ variable "domain" {
  type    = string
  default = "example.com"
 }
-variable "raw_scores" {
- type    = list(string)
- default = ["alice:90", "bob:75", "carol:85"]
-}
 variable "items1" {
  type    = list(string)
  default = ["b", "a", "c", "a", "b"]
@@ -141,6 +137,7 @@ variable "words" {
  type    = list(string)
  default = ["hi", "cat", "car", "tree", "hi", "car"]
 }
+
 variable "raw_scores" {
  type    = list(string)
  default = ["alice:90", "bob:75", "carol:85"]
