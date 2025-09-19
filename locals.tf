@@ -44,5 +44,5 @@ locals {
 Hotels1_upper = [for h in var.Hotels1 : h == "Hyatt" ? upper(h) : h]
 }
 locals {
-  replaced = replace(var.Hotels1, "Hyatt", "HYATT")
+  modify = modify(var.Hotels1, "Hyatt", "HYATT")
 }
