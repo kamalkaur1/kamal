@@ -28,6 +28,7 @@ value=var.truefalse
 output  "list"{
 value=var.list
 }
+}
 output  "listoffruits"{
 value=var.listoffruits
 }
