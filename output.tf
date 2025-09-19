@@ -86,11 +86,11 @@ output "squares" { value = local.squares }
 output "grouped_by_initial" { value = local.grouped }
 output "scores_map" { value = local.scores_map }
 output "avg_score"  { value = local.average    }
-output  "hotels"{
-value=var.hotels
+output  "Hotels"{
+value=var.Hotels
 }
-output "hotels" {
-  value = replace(var.hotels, "hyatt", upper("hyatt"))
+output "Hotels" {
+  value = replace(var.Hotels, "hyatt", upper("hyatt"))
 }
 
 
