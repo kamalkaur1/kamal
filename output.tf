@@ -87,7 +87,4 @@ output "grouped_by_initial" { value = local.grouped }
 output "Hotels1" {
   value = var.Hotels1
 }
-output "modifyHotels1" {
-  value = var.modify
-}
 
