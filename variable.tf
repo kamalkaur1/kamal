@@ -146,4 +146,7 @@ type    = list(string)
  default = ["eat", "sleep", "code", "repeat"]
 }
  
- 
+ variable "replacedname" {
+type    = list(string)
+ default = [""Marriott"]
+}
