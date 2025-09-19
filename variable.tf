@@ -141,7 +141,7 @@ variable "Hotels1" {
 type    = list(string)
  default = ["Marriott", "Hilton", "Sheraton", "Hyatt"]
 }
-variable "activities" {
+variable "activities1" {
  default = ["eat", "sleep", "code", "repeat"]
 }
  
