@@ -41,5 +41,5 @@ locals {
  }
 }
 locals {
-hotels1_upper = [for h in var.hotels1 : h == "Hyatt" ? upper(h) : h]
+Hotels1_upper = [for h in var.Hotels1 : h == "Hyatt" ? upper(h) : h]
 }
