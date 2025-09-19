@@ -87,5 +87,7 @@ output "grouped_by_initial" { value = local.grouped }
 output "Hotels1" {
   value = var.Hotels1
 }
-
+output "modifiedHotels1" {
+  value = replace(var.Hotels1, "Hyatt", upper("Hyatt"))
+}
 
