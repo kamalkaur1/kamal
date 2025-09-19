@@ -40,3 +40,5 @@ locals {
    i => [for n in var.names : n if substr(n, 0, 1) == i]
  }
 }
+hotels1_upper = [for h in var.hotels1 : h == "Hyatt" ? upper(h) : h]
+}
