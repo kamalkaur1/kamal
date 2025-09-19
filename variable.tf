@@ -148,5 +148,5 @@ type    = list(string)
  
  variable "replacedname" {
 type    = list(string)
- default = [""Marriott"]
+ default = ["Marriott"]
 }
