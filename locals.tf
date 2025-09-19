@@ -40,7 +40,3 @@ locals {
    i => [for n in var.names : n if substr(n, 0, 1) == i]
  }
 }
-scores_map = { for p in local.score_pairs : p.name => p.score }
- average = length(local.score_pairs) == 0 ? 0 :sum([for p in local.score_pairs : p.score]) / length(local.score_pairs)
-}
-
