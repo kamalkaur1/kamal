@@ -85,7 +85,7 @@ output "evens"   { value = local.evens }
 output "squares" { value = local.squares }
 output "grouped_by_initial" { value = local.grouped }
 output "Hotels1" {
-  value = replace(var.Hotels1, "hyatt", upper("hyatt"))
+  value = var.Hotels1
 }
 
 
