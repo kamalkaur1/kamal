@@ -91,18 +91,4 @@ output "activities1" {
 value = join(" → ", var.activities1)
 }
 output "rname" {
-  value = replace(
-    replace(
-      replace(
-        replace(
-          replace (var.rname, "a", "*"),
-          "e", "*"
-        ),
-        "i", "*"
-      ),
-      "o", "*"
-    ),
-    "u", "*"
-  )
-}
-
+    value = local.rname
