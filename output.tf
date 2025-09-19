@@ -90,7 +90,7 @@ output "Hotels1" {
 output "activities1" {
 value = join(" → ", var.activities1)
 }
-output "replacedname" {
+output "rname" {
   value = replace(
     replace(
       replace(
