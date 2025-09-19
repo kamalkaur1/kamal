@@ -84,7 +84,6 @@ output "csv"           { value = local.csv }
 output "evens"   { value = local.evens }
 output "squares" { value = local.squares }
 output "grouped_by_initial" { value = local.grouped }
-}
 output "Hotels1" {
   value = [for word in var.Hotels1 : (word == "Hyatt" ? upper(word) : word)]
 }
