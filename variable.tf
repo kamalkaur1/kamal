@@ -142,6 +142,7 @@ type    = list(string)
  default = ["Marriott", "Hilton", "Sheraton", "Hyatt"]
 }
 variable "activities1" {
+type    = list(string)
  default = ["eat", "sleep", "code", "repeat"]
 }
  
