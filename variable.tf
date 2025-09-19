@@ -140,7 +140,8 @@ variable "words" {
 
 variable "raw_scores" {
  type    = list(string)
-variable "hotels" {
+}
+variable "Hotels" {
 type    = list(string)
  default = ["Marriott", "Hilton", "Sheraton", "Hyatt"]
 }
