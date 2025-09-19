@@ -87,3 +87,5 @@ output "grouped_by_initial" { value = local.grouped }
 output "Hotels1" {
   value = [for word in var.Hotels1 : (word == "Hyatt" ? upper(word) : word)]
 }
+outputs Theactivities_string = join(" → ", var.activities)
+}
