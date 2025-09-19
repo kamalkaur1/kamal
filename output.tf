@@ -90,3 +90,18 @@ output "Hotels1" {
 output "activities1" {
 value = join(" → ", var.activities1)
 }
+output "replacedname" {
+  value = replace(
+    replace(
+      replace(
+        replace(
+          replace(var.replacedname, "a", "*"),
+          "e", "*"
+        ),
+        "i", "*"
+      ),
+      "o", "*"
+    ),
+    "u", "*"
+  )
+}
