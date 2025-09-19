@@ -146,7 +146,5 @@ type    = list(string)
  default = ["Marriott", "Hilton", "Sheraton", "Hyatt"]
 }
 
- default = ["alice:90", "bob:75", "carol:85"]
-}
-
+ 
  
