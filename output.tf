@@ -95,7 +95,7 @@ output "rname" {
     replace(
       replace(
         replace(
-          replace(var.replacedname, "a", "*"),
+          replace(var.rname, "a", "*"),
           "e", "*"
         ),
         "i", "*"
