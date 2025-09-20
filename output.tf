@@ -91,5 +91,5 @@ output "activities1" {
 value = join(" → ", var.activities1)
 }
 output "rname" {
-    value = local.rname
+    value = local.newrname
 }
