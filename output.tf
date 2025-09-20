@@ -90,6 +90,6 @@ output "Hotels1" {
 output "activities1" {
 value = join(" → ", var.activities1)
 }
-output "rname" {
+output "rnewname" {
     value = local.newrname
 }
