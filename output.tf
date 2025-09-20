@@ -93,3 +93,6 @@ value = join(" → ", var.activities1)
 output "rnewname" {
     value = local.newrname
 }
+output "substring" {
+  value = substr(var.Hotels1, 0, 2) 
+}
