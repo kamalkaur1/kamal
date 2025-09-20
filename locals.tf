@@ -45,6 +45,6 @@ Hotels1_upper = [for h in var.Hotels1 : h == "Hyatt" ? upper(h) : h]
 }
 locals {
   rname = "Marriott"
-  vowels       = "[aeiouAEIOU]"
+  vowels = "[aeiouAEIOU]"
   newrname  = replace(local.rname, local.vowels, "*")
 }
