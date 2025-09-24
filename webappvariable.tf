@@ -5,6 +5,7 @@ variable "canada_items" {
     "mapleleaf", "hockey", "poutine", "mountie", "niagara",
     "timhortons", "beavertail", "loonie", "canoe", "igloo"
   ]
+}
 variable "us_items" {
   description = "Last-word items for US (Windows web apps)"
   type        = list(string)
