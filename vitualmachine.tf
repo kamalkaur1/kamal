@@ -13,7 +13,7 @@ resource "azurerm_virtual_network" "VMnetwork" {
 resource "azurerm_subnet" "VMsubnet" {
   name                 = "internal"
   resource_group_name  = azurerm_resource_group.VM.name
-  virtual_network_name = azurerm_virtual_network.VM.name
+  virtual_network_name = azurerm_virtual_network.VMnetwork.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
@@ -24,7 +24,7 @@ resource "azurerm_network_interface" "VMinterface" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.VM.id
+    subnet_id                     = azurerm_subnet.VMsubnet.id
     private_ip_address_allocation = "Dynamic"
   }
 }
