@@ -29,14 +29,14 @@ resource "azurerm_network_interface" "VMinterface" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "VMlinux" {
+resource "azurerm_linux_virtual_machine" "VM" {
   name                = "example-machine"
   resource_group_name = azurerm_resource_group.VM.name
   location            = azurerm_resource_group.VM.location
   size                = "Standard_F2"
   admin_username      = "adminuser"
   network_interface_ids = [
-    azurerm_network_interface.VMlinux.id,
+    azurerm_network_interface.VM.id,
   ]
 
   admin_ssh_key {
