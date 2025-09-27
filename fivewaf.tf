@@ -1,21 +1,21 @@
 
 # 1. Groupe de ressources pour centraliser toutes les ressources
-resource "azurerm_resource_group" "rg" {
-  name     = "waf-demo-rg"
+resource "azurerm_resource_group" "rg1" {
+  name     = "waf-demo-rg1"
   location = "Canada Central"
 }
 # 2. VNet pour réseaux internes (obligatoire pour Application Gateway)
 resource "azurerm_virtual_network" "vnet" {
   name                = "demo-vnet"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg1.location
+  resource_group_name = azurerm_resource_group.rg1.name
 }
  
 # 3. Subnet dédié Application Gateway
 resource "azurerm_subnet" "appgw_subnet" {
   name                 = "appgw-subnet"
-  resource_group_name  = azurerm_resource_group.rg.name
+  resource_group_name  = azurerm_resource_group.rg1.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/24"]
 }
@@ -23,8 +23,8 @@ resource "azurerm_subnet" "appgw_subnet" {
 # 4. IP publique pour exposer le Gateway sur Internet
 resource "azurerm_public_ip" "gw_ip" {
   name                = "waf-gw-ip"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg1.location
+  resource_group_name = azurerm_resource_group.rg1.name
   allocation_method   = "Static"
   sku                 = "Standard"
 }
@@ -44,8 +44,8 @@ locals {
 resource "azurerm_web_application_firewall_policy" "policy" {
   for_each           = toset(local.waf_policy_names)
   name               = each.value
-  resource_group_name = azurerm_resource_group.rg.name
-  location           = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg1.name
+  location           = azurerm_resource_group.rg1.location
   policy_settings {
     enabled = true
     mode    = "Prevention"
