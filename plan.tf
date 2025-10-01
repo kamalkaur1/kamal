@@ -1,4 +1,4 @@
-1) Plans with for_each (map → multiple App Service Plans)
+#  Plans with for_each (map → multiple App Service Plans)
  
 variable  "plans" {
    default = {
