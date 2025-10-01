@@ -6,7 +6,7 @@ rg-prod= { sku = "P1v3", worker_count = 3 }
   }
 }
  
-resource "azurerm_service_plan" "asp" {
+resource "azurerm_service_plan" "asp1" {
   for_each            = var.plans1
   name                = "asp-${each.key}"
   location            = azurerm_resource_group.rg.location
