@@ -1,10 +1,10 @@
 1) Plans with for_each (map → multiple App Service Plans)
  
-variable "plans" {
-  default = {
+variable  "plans" {
+   default = {
     dev  = { sku = "B1", worker_count = 1 }
     prod = { sku = "P1v3", worker_count = 2 }
-  }
+    }
 }
  
 resource "azurerm_service_plan" "asp" {
