@@ -16,3 +16,25 @@ resource "azurerm_service_plan" "asp" {
   sku_name            = each.value.sku
   worker_count        = each.value.worker_count
 }
+/* 
+  Sets the Azure resource name. It will dynamically become: 
+asp-dev for the dev plan 
+asp-prod for the prod plan
+ sku_name = each.value.sku
+*/
+ 
+/* 
+Gets the sku from the object defined in var.plans.
+For dev → "B1"
+For prod → "P1v3"
+worker_count = each.value.worker_count
+Gets the worker_count (number of workers) from the plan object.
+*/
+
+/* For dev → 1
+ For prod → 2
+ Terraform will create two service plans automatically:
+ asp-dev (Linux, B1, 1 worker)
+ asp-prod (Linux, P1v3, 2 workers)
+*/
+ 
