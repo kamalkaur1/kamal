@@ -1,6 +1,6 @@
 # Config (edit if you want)
 # --------------------------
-variable "location" {
+variable "location1" {
  type        = string
  default     = "Canada Central"
  description = "Azure region for all resources"
@@ -37,7 +37,7 @@ locals {
 # --------------------------
 # Resource Group
 # --------------------------
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "rg1" {
  name     = local.rg_name
  location = var.location
 }
@@ -46,8 +46,8 @@ resource "azurerm_resource_group" "rg" {
 # --------------------------
 resource "azurerm_api_management" "apim" {
  name                = local.apim_name
- location            = azurerm_resource_group.rg.location
- resource_group_name = azurerm_resource_group.rg.name
+ location            = azurerm_resource_group.rg1.location1
+ resource_group_name = azurerm_resource_group.rg1.name
  publisher_name      = var.publisher_name
  publisher_email     = var.publisher_email
  sku_name = "Developer_1" # Dev/test; not for prod traffic
@@ -58,7 +58,7 @@ resource "azurerm_api_management" "apim" {
 resource "azurerm_api_management_product" "starter" {
  product_id            = "starter"
  api_management_name   = azurerm_api_management.apim.name
- resource_group_name   = azurerm_resource_group.rg.name
+ resource_group_name   = azurerm_resource_group.rg1.name
  display_name          = "Starter Product"
  description           = "A starter product with mcit APIs."
  subscription_required = true
@@ -98,7 +98,7 @@ resource "azurerm_api_management_product_api" "starter_apis" {
 # --------------------------
 resource "azurerm_api_management_user" "dev" {
  api_management_name = azurerm_api_management.apim.name
- resource_group_name = azurerm_resource_group.rg.name
+ resource_group_name = azurerm_resource_group.rg1.name
  user_id    = "mcit-dev"
  first_name = "Mcit"
  last_name  = "Developer"
@@ -108,7 +108,7 @@ resource "azurerm_api_management_user" "dev" {
 resource "azurerm_api_management_subscription" "starter_sub" {
  display_name        = "Starter Subscription"
  api_management_name = azurerm_api_management.apim.name
- resource_group_name = azurerm_resource_group.rg.name
+ resource_group_name = azurerm_resource_group.rg1.name
  product_id = azurerm_api_management_product.starter.id
  user_id    = azurerm_api_management_user.dev.id
 }
