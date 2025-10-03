@@ -15,3 +15,18 @@ provider "azurerm"{
   client_secret=var.client_secret
   tenant_id=var.tenant_id
 }
+
+terraform {
+ required_version = ">= 1.5.0"
+ required_providers {
+   azurerm = {
+     source  = "hashicorp/azurerm"
+     # Feel free to pin tighter, e.g. "~> 4.47"
+     version = ">= 4.40.0, < 5.0.0"
+   }
+   random = {
+     source  = "hashicorp/random"
+     version = ">= 3.6.0"
+   }
+ }
+}
