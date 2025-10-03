@@ -14,7 +14,7 @@ terraform{
   client_secret=var.client_secret
   tenant_id=var.tenant_id
 }
-random = {
+random ={
      source  = "hashicorp/random"
      version = ">= 3.6.0"
 }
