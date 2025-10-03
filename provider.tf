@@ -1,9 +1,11 @@
 terraform{
   required_providers{
     azurerm={
+random = {
       source="hashicorp/azurerm"
       version= ">=3.70.0"#this version is for azurerm, NOT terraform version
     }
+}
   }
   required_version=">=1.4.0"#this version is for Terraform Version, NOT azurerm
 }
@@ -13,8 +15,4 @@ terraform{
   client_id=var.client_id
   client_secret=var.client_secret
   tenant_id=var.tenant_id
-}
-random = {
-     source  = "hashicorp/random"
-     version = ">= 3.6.0"
 }
