@@ -46,7 +46,7 @@ resource "azurerm_resource_group" "rgg" {
 # --------------------------
 resource "azurerm_api_management" "apim" {
  name                = local.apim_name
- location            = azurerm_resource_group.rgg.location1
+ location            = azurerm_resource_group.rgg.location
  resource_group_name = azurerm_resource_group.rgg.name
  publisher_name      = var.publisher_name
  publisher_email     = var.publisher_email
