@@ -37,7 +37,7 @@ locals {
 # --------------------------
 # Resource Group
 # --------------------------
-resource "azurerm_resource_group" "rg1" {
+resource "azurerm_resource_group" "rgg" {
  name     = local.rg_name
  location = var.location
 }
@@ -46,8 +46,8 @@ resource "azurerm_resource_group" "rg1" {
 # --------------------------
 resource "azurerm_api_management" "apim" {
  name                = local.apim_name
- location            = azurerm_resource_group.rg1.location1
- resource_group_name = azurerm_resource_group.rg1.name
+ location            = azurerm_resource_group.rgg.location1
+ resource_group_name = azurerm_resource_group.rgg.name
  publisher_name      = var.publisher_name
  publisher_email     = var.publisher_email
  sku_name = "Developer_1" # Dev/test; not for prod traffic
@@ -58,7 +58,7 @@ resource "azurerm_api_management" "apim" {
 resource "azurerm_api_management_product" "starter" {
  product_id            = "starter"
  api_management_name   = azurerm_api_management.apim.name
- resource_group_name   = azurerm_resource_group.rg1.name
+ resource_group_name   = azurerm_resource_group.rgg.name
  display_name          = "Starter Product"
  description           = "A starter product with mcit APIs."
  subscription_required = true
@@ -71,7 +71,7 @@ resource "azurerm_api_management_product" "starter" {
 resource "azurerm_api_management_api" "apis" {
  for_each            = local.apis
  name                = each.key
- resource_group_name = azurerm_resource_group.rg.name
+ resource_group_name = azurerm_resource_group.rgg.name
  api_management_name = azurerm_api_management.apim.name
  revision            = "1"
  display_name        = each.value.display_name
@@ -91,14 +91,14 @@ resource "azurerm_api_management_product_api" "starter_apis" {
  api_name            = each.value.name
  product_id          = azurerm_api_management_product.starter.product_id
  api_management_name = azurerm_api_management.apim.name
- resource_group_name = azurerm_resource_group.rg.name
+ resource_group_name = azurerm_resource_group.rgg.name
 }
 # --------------------------
 # Optional: Dev user + subscription to get a key
 # --------------------------
 resource "azurerm_api_management_user" "dev" {
  api_management_name = azurerm_api_management.apim.name
- resource_group_name = azurerm_resource_group.rg1.name
+ resource_group_name = azurerm_resource_group.rgg.name
  user_id    = "mcit-dev"
  first_name = "Mcit"
  last_name  = "Developer"
@@ -108,7 +108,7 @@ resource "azurerm_api_management_user" "dev" {
 resource "azurerm_api_management_subscription" "starter_sub" {
  display_name        = "Starter Subscription"
  api_management_name = azurerm_api_management.apim.name
- resource_group_name = azurerm_resource_group.rg1.name
+ resource_group_name = azurerm_resource_group.rgg.name
  product_id = azurerm_api_management_product.starter.id
  user_id    = azurerm_api_management_user.dev.id
 }
