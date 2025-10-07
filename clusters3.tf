@@ -12,6 +12,7 @@ locals {
     "mcit-aks-2",
     "mcit-aks-3",
     ]
+  }
 resource "azurerm_container_registry" "containers" {
   for_each            = var.clusters3
   name                = locals.key
