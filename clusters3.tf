@@ -8,7 +8,7 @@ mcit-aks-3 = { sku = "basic",nodecount = "3"  }
    
 }
 
-resource "clusters" "this" {
+resource "clustersname" "this" {
   for_each = var.clusters3
 
   name     = each.key
