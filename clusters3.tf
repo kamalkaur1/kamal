@@ -5,15 +5,7 @@ variable "clusters3" {
 mcit-aks-3 = { sku = "P1v3",node_count = 3 }
   }
 }
-locals {
-  clustersnames = [
-    "",
-    "mcit-aks-1",
-    "mcit-aks-2",
-    "mcit-aks-3",
-    ]
-  }
-resource "azurerm_container_registry" "containers" {
+resource "azurerm_clusters_registry" "containers" {
   for_each            = var.clusters3
   name                = each.key
   location            = azurerm_resource_group.rg.location
