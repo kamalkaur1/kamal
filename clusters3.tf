@@ -10,6 +10,6 @@ resource "azurerm_container_registry" "containers" {
   name                = "asp-${each.key}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-    sku_name            = each.value.sku
+    sku      = each.value.sku
   node_count        = each.value.node_count
 }
