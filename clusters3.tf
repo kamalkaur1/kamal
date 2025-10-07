@@ -15,7 +15,7 @@ locals {
   }
 resource "azurerm_container_registry" "containers" {
   for_each            = var.clusters3
-  name                = local.key
+  name                = each.key
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
     sku      = each.value.sku
