@@ -4,8 +4,8 @@ variable "clusters3" {
     mcit-aks-2 = { sku = "P1v3", node_count = 2 }
 mcit-aks-3 = { sku = "P1v3",node_count = 3 }
   }
-
-resource "registrycontainer" "containers" {
+}
+resource "azurerm_container_registry"" "containers" {
   for_each            = var.clusters3
   name                = "asp-${each.key}"
   location            = azurerm_resource_group.rg.location
