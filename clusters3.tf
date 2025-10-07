@@ -7,9 +7,9 @@ mcit-aks-3 = { sku = "P1v3",node_count = 3 }
 }
 resource "azurerm_container_registry" "containers" {
   for_each            = var.clusters3
-  name                = "asp-${each.key}"
+  name                = "${each.key}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
     sku      = each.value.sku
-  node_count  = each.value.node_count
+  node_count = each.value.node_count
 }
