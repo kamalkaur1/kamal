@@ -1,14 +1,19 @@
+
+
 variable "clusters3" {
   default = {
-  mcit-aks-1  = { sku = "B1", node_count = 1 }
-  mcit-aks-2 = { sku = "P1v3", node_count = 2 }
-mcit-aks-3 = { sku = "P1v3",node_count = 3 }
+    mcit-aks-1  = { sku = "standard", nodecount = "1" }
+  mcit-aks-2 = { sku = "Premium", nodecount ="2" }
+mcit-aks-3 = { sku = "basic",nodecount = "3"  } 
+   
+}
+
+resource "cluster" "this" {
+  for_each = var.clusters3
+
+  name     = each.key
+  version  = each.value.nodecount
+ 
+  
   }
 }
-resource "clusters_registry" "containers" {
-  for_each            = var.clusters3
-  name                = each.key
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-    sku      = each.value.sku
- }
