@@ -2,7 +2,7 @@ variable "prefix" {
  type    = string
  default = "montrealitcollege"
 }
-variable "tenant_id" {
+variable "tenantid" {
  type        = string
  description = "AAD tenant ID (required for Key Vault access policy)"
 }
@@ -26,7 +26,7 @@ resource "azurerm_key_vault" "mcitprefix_kv" {
  name                       = "${var.prefix}-kv"
  resource_group_name        = azurerm_resource_group.mcitprefix_rg.name
  location                   = azurerm_resource_group.mcitprefix_rg.location
- tenant_id                  = var.tenant_id
+ tenant_id                  = var.tenantid
  sku_name                   = "standard"
  purge_protection_enabled   = true
  soft_delete_retention_days = 7
