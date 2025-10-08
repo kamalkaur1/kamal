@@ -23,7 +23,7 @@ resource "azurerm_key_vault" "mcitprefix_kv" {
  name                       = "${var.prefix}-kv"
  resource_group_name        = azurerm_resource_group.mcitprefix_rg.name
  location                   = azurerm_resource_group.mcitprefix_rg.location
- tenant_id                  = var.tenantid
+ tenant_id                  = var.tenant_id
  sku_name                   = "standard"
  purge_protection_enabled   = true
  soft_delete_retention_days = 7
