@@ -122,3 +122,23 @@ module "vpc" {
   }
 }
 
+
+
+
+
+
+variable "clusters3" {
+  default = {
+   cluster1  = { cidr_block = "10.0.0.0/16", worker_count = 1 }
+    cluster1 = { cidr_block = "10.1.0.0/16", worker_count = 2 }
+cluster1 = { cidr_block = "10.2.0.0/16", worker_count = 3 }
+  }
+}
+
+
+
+
+
+
+
+
