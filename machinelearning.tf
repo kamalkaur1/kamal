@@ -1,4 +1,4 @@
-esource "random_string" "mcitprefix_random" {
+resource "random_string" "mcitprefix_random" {
   length  = 6
   upper   = false
   special = false
